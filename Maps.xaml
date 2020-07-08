@@ -1,0 +1,30 @@
+﻿<Page x:Name="MapsPage"
+    x:Class="MC_Addons_Manager.Maps"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MC_Addons_Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto">
+
+        <ScrollViewer x:Name="MapsScroll" Background="{ThemeResource SystemControlAcrylicElementBrush}" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Visible">
+            <ItemsControl x:Name="MapsControls" ItemsSource="{Binding MapsCollection}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Spacing="20" Padding="0, 20" x:Name="MapsStack" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:Name="grid">
+                            <local:ResourceBox ResourceData="{Binding ElementName=grid,Path=DataContext}" DeleteCommand="{Binding ElementName=MapsPage,Path=DataContext.DeleteCommand}" />
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Page>

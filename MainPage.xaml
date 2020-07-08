@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="MC_Addons_Manager.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MC_Addons_Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+
+        <VariableSizedWrapGrid Background="{ThemeResource SystemControlAcrylicElementBrush}" VerticalAlignment="Top" Width="Auto" Height="75" Grid.ColumnSpan="2"/>
+
+        <!-- Maps Button -->
+        <Button x:Name="Btn_Worlds" Foreground="#C0C0C0" Background="Transparent" Margin="10,0,0,0" VerticalAlignment="Top" Height="75" Width="170" Grid.ColumnSpan="2" Click="Btn_Worlds_Click">
+            <StackPanel Orientation="Horizontal">
+                <FontIcon FontFamily="Segoe MDL2 Assets" FontSize="25" Glyph="&#xE7B8;"/>
+                <TextBlock Text="Worlds" Padding="7" FontSize="20"/>
+            </StackPanel>
+        </Button>
+
+        <!-- Resources Packs -->
+        <Button Foreground="#C0C0C0" Background="Transparent" Margin="83,0,0,0" VerticalAlignment="Top" Height="75" Width="170" Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <FontIcon FontFamily="Segoe MDL2 Assets" FontSize="25" Glyph="&#xE790;"/>
+                <TextBlock Text="Texture Packs" Padding="7" FontSize="20"/>
+            </StackPanel>
+        </Button>
+
+        <!-- Addons Packs -->
+        <Button Foreground="#C0C0C0" Background="Transparent" Margin="258,0,0,0" VerticalAlignment="Top" Height="75" Width="170" Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <FontIcon FontFamily="Segoe MDL2 Assets" FontSize="25" Glyph="&#xE710;"/>
+                <TextBlock Text="Addons" Padding="7" FontSize="20"/>
+            </StackPanel>
+        </Button>
+
+        <!-- Addons Packs -->
+        <Button x:Name="Btn_Import" Foreground="#C0C0C0" Background="Transparent" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="75" Width="118" Grid.Column="1" Click="Btn_Import_Click">
+            <StackPanel Orientation="Horizontal">
+                <FontIcon FontFamily="Segoe MDL2 Assets" FontSize="25" Glyph="&#xE8B5;"/>
+                <TextBlock Text="Import" FontSize="20" Padding="7"/>
+            </StackPanel>
+        </Button>
+
+        <Frame x:Name="AppFrame" Grid.ColumnSpan="2" Margin="0,75,0,0"/>
+
+    </Grid>
+</Page>
