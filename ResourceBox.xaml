@@ -22,7 +22,7 @@
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE78C;" FontSize="26"/>
             </Button>
         </StackPanel>
-        <TextBlock x:Name="TxtName" HorizontalAlignment="Left" Margin="274,10,0,0" Text="{Binding ElementName=ResBox, Path=ResourceData.Name}" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
-        <TextBlock x:Name="TxtDate" HorizontalAlignment="Left" Margin="276,41,0,0" Text="{Binding ElementName=ResBox, Path=ResourceData.Date}" FontSize="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
+        <TextBlock x:Name="TxtName" HorizontalAlignment="Left" Margin="274,10,0,0" Text="{Binding ResourceData.Name}" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
+        <TextBlock x:Name="TxtDate" HorizontalAlignment="Left" Margin="276,41,0,0" Text="{Binding ResourceData.Date}" FontSize="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
     </Grid>
 </UserControl>

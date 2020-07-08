@@ -39,20 +39,6 @@ namespace MC_Addons_Manager
             DependencyProperty.Register("ResourceData", typeof(ResourceData), typeof(ResourceBox), new PropertyMetadata(new ResourceData()));
 
 
-
-        public object Test
-        {
-            get { return (object)GetValue(TestProperty); }
-            set { SetValue(TestProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for Test.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty TestProperty =
-            DependencyProperty.Register("Test", typeof(object), typeof(ResourceBox), new PropertyMetadata(0));
-
-
-
-
         public ICommand DeleteCommand
         {
             get { return (ICommand)GetValue(DeleteCommandProperty); }
